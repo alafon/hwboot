@@ -1,6 +1,6 @@
 {include uri='design:page_header_logo.tpl'}
 
-<div id="metanav" class="alert well">
+<div id="metanav" class="alert well subnav">
 	<div class="container">
 		<ul>
 			{include uri='design:page_header_languages.tpl'}
