@@ -1,5 +1,5 @@
 {* eZ Less dependent implementation *}
-{"less/bootstrap.less"|ezless_add()}
+{ezini( 'DesignSettings', 'FrontendLessFileList', 'hwboot.ini' )|ezless_add()}
 {ezless()}
 
 {* @todo Implement a fallback to default CSS? *}
