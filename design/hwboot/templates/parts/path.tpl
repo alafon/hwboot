@@ -1,9 +1,12 @@
 <ul class="breadcrumb">
     {foreach $pagedata.path_array as $path}
+        <li {if $path.url|not()}class="active"{/if}>
         {if $path.url}
-            <li><a href={cond( is_set( $path.url_alias ), $path.url_alias, $path.url )|ezurl}>{$path.text|wash}</a></li>
+            <a href={cond( is_set( $path.url_alias ), $path.url_alias, $path.url )|ezurl}>{$path.text|wash}</a>
         {else}
-            <li class="active">{$path.text|wash}</li>
+            {$path.text|wash}
         {/if}
+        {delimiter}<span class="divider">&gt;</span>{/delimiter}
+        </li>
     {/foreach}
 </ul>
