@@ -7,6 +7,6 @@
     <li{if $siteaccess|eq($access_type.name)} class="current_siteaccess"{/if}>
         <a class="btn btn-small{$siteaccess|eq($access_type.name)|choose('',' btn-inverse disabled')}" href={$lang.url|ezurl} title="Switch language">
             <i class="icon-flag{$siteaccess|eq($access_type.name)|choose('',' icon-white')}"></i>{$lang.text|wash}
-        </a>{delimiter}{/delimiter}
+        </a>
     </li>
 {/foreach}
