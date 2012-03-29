@@ -47,8 +47,8 @@
                     <b class="caret"></b></a>
             {else}
                 <li id="node_id_{$item.node_id}"{if $item_class} class="{$item_class|implode(" ")}"{/if}>
-                    <a {if $level_2_items|count()}class="dropdown-toggle" data-toggle="dropdown"{/if}href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{elseif $level_2_items|count()|eq(0)}{$item.url_alias|ezurl}{else}"#node_id_{$item.node_id}"{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{$item.name|wash()}
-                    {if $level_2_items|count()}<b class="caret">{/if}</b></a>
+                    <a {if $level_2_items|count()}class="dropdown-toggle" data-toggle="dropdown" {/if}href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{elseif $level_2_items|count()|eq(0)}{$item.url_alias|ezurl}{else}"#node_id_{$item.node_id}"{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{$item.name|wash()}
+                    {if $level_2_items|count()}<b class="caret"></b>{/if}</a>
             {/if}
                 {if $level_2_items|count()}
                 <ul class="dropdown-menu">
